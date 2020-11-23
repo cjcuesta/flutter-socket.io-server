@@ -18,6 +18,12 @@
         socket.emit('mensaje', {nombre: 'Carlos'});
 
         socket.on('mensaje', function(payload){ console.log('Escuchando', payload )});
+        
+        socket.on('lecturas', function(lecturas){ 
+            console.clear();
+            console.table( lecturas )
+        });
+
 
     </script>
 </body>
